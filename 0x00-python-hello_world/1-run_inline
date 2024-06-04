@@ -1,2 +1,6 @@
 #!/bin/bash
-python3 $PYCODE
+if [ -z "$PYCODE" ]; then
+    echo "The PYCODE environment variable is empty. Please set it with your Python code."
+    exit 1
+fi
+python3 -c "$PYCODE"
