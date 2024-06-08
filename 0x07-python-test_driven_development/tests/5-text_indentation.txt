@@ -1,0 +1,39 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello. How are you? I am fine.")
+Hello.
+
+How are you?
+
+I am fine.
+>>> text_indentation("This is a test: to see if it works.")
+This is a test:
+
+to see if it works.
+>>> text_indentation("Check multiple sentences. Like this? And this: Yes.")
+Check multiple sentences.
+
+Like this?
+
+And this:
+
+Yes.
+>>> text_indentation("No special characters")
+No special characters
+>>> text_indentation(123)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string
+>>> text_indentation("Spaces after punctuation: should be trimmed. Yes: they should?")
+Spaces after punctuation:
+
+should be trimmed.
+
+Yes:
+
+they should?
+>>> text_indentation("")
+>>> text_indentation("   ")
+>>> text_indentation("A sentence with a space after punctuation.  And another?")
+A sentence with a space after punctuation.
+
+And another?
