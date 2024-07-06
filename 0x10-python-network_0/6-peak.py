@@ -26,3 +26,9 @@ def find_peak(list_of_integers):
         else:
             return binary_search(list_of_integers, mid + 1, right)
     return binary_search(list_of_integers, 0, len(list_of_integers) - 1)
+# Test cases
+if __name__ == "__main__":
+    print(find_peak([1, 2, 3, 4, 5]))  # Correct output: 5
+    print(find_peak([5, 4, 3, 2, 1]))  # Correct output: 5
+    print(find_peak([1, 4, 6, 2, 1]))  # Correct output: 6
+    print(find_peak([5, 4, 6, 2, 1, 4, 5, 2]))  # Correct output: 6
