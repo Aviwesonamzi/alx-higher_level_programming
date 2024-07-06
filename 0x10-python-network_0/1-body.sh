@@ -1,4 +1,3 @@
 #!/bin/bash
-# This script takes in a URL, sends a GET request to the URL, and displays the body of a 200 status code response
-curl -s -L -o - "$1" -w "%{http_code}" | awk '/200$/{print; exit}'
-
+# Sends a GET request to a URL and displays the body of the response only if the status code is 200
+curl -sL -w "%{http_code}" "$1" -o response.txt | grep -q "200$" && cat response.txt
